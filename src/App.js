@@ -41,11 +41,11 @@ class App extends React.Component {
   }
 
   render() {
-    console.log('this.state.messages:', this.state.messages);
+    console.log("this.state.messages:", this.state.messages);
     return (
       <div className="app">
         <RoomList />
-        <MessageList messages = {this.state.messages} />
+        <MessageList messages={this.state.messages} />
         <SendMessage />
         <CreateRoom />
       </div>
