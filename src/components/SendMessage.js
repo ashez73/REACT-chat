@@ -17,10 +17,15 @@ class SendMessage extends React.Component {
   handleForm = e => {
     e.preventDefault();
     console.log(`sending: ${this.state.message}`);
+    console.log(this.props);
+    this.props.sendMessage(this.state.message);
+    this.setState({
+      message: ''
+  })
   };
 
   render() {
-    console.log(this.state.message);
+    //console.log(this.state.message);
     return (
       <form onSubmit={this.handleForm} className="send-message-form">
         <input
